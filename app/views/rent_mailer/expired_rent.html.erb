@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h2>
+      <%= I18n.t(:rent_expired).upcase %>
+    </h2>
+    <h3>
+      <%= I18n.t(:title) + ": #{@book.title}, " + I18n.t(:genre) + ": #{@book.genre}, " + I18n.t(:author) + ": #{@book.author}." %>
+    </h3>
+    <h3>
+      <%= I18n.t(:created_rent) + ": #{@rent.rent_in}." %>
+    </h3>
+    <h3>
+      <%= I18n.t(:end_of_rent) + ": #{@rent.rent_out}." %>
+    </h3>
+  </body>
+</html>

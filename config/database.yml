@@ -1,0 +1,27 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: WbooksApi_development
+  username: wbooks-api
+  password: wbooks-api
+
+test:
+  <<: *default
+  database: WbooksApi_test
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: wbooks-api
+  password: wbooks-api
+
+production:
+  <<: *default
+  database: WbooksApi_production
+  username: wbooks-api
+  password: <%= ENV['WBOOKSAPI_DATABASE_PASSWORD'] %>

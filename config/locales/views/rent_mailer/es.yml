@@ -1,0 +1,9 @@
+es:
+  rented: 'alquilado'
+  body_title: 'detalles del alquiler:'
+  title: 'Título'
+  genre: 'Genero'
+  author: 'Autor'
+  created_rent: 'Día de la creación del alquiler'
+  end_of_rent: 'Fin del alquiler'
+  rent_expired: 'alquiler vencido'

@@ -1,0 +1,9 @@
+en:
+  rented: 'rented'
+  body_title: 'rent details'
+  title: 'Title'
+  genre: 'Genre'
+  author: 'Author'
+  created_rent: 'Date of creation of the rent'
+  end_of_rent: 'End of rental'
+  rent_expired: 'rent expired'

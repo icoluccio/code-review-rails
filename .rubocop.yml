@@ -1,0 +1,17 @@
+require:
+ rubocop-rails
+Documentation:
+ Enabled: false
+LineLength:
+ Max: 99
+Style/FrozenStringLiteralComment:
+ Enabled: false
+Metrics/BlockLength:
+  Exclude:
+  - 'spec/**/*'
+AllCops:
+  Exclude:
+   - 'bin/**/*'
+   - 'config/**/*'
+   - 'db/**/*'
+   - 'node_modules/**/*'
