@@ -1,0 +1,4 @@
+notify_expired_rents:
+  cron: '0 0 9 * * * America/Argentina/Buenos_Aires'
+  class: ExpiredRentNotificationWorker
+  description: 'Job scheduler for expired rent email notification'
