@@ -51,15 +51,13 @@ RSpec.describe BooksController do
     end
   end
 
-  # describe 'GET #book_information' do
-  #   context 'When request openlibrary.org' do
-  #     include_context 'with authenticated user'
-  #     subject!(:http_response) { get :book_information, params: { isbn: '0451526538' } }
-  #
-  #     it 'When you look a book with correct ISBN' do
-  #       expect(JSON.parse(http_response.body)['title']).to eq('The adventures of Tom Sawyer')
-  #     end
-  #     it { is_expected.to have_http_status(200) }
-  #   end
-  # end
+  describe 'GET #libros_de_gente' do
+    context 'When you look a book with correct id' do
+      include_context 'with authenticated user'
+      let!(:book) { create(:book, rents: [create(:rent)]) }
+      subject!(:http_response) { get :libros_de_gente, params: { id: book.id } }
+
+      it { is_expected.to have_http_status(200) }
+    end
+  end
 end
